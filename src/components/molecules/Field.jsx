@@ -8,7 +8,7 @@ function Field(props) {
                 <Label text={props.text}/>
             </div>
             <div>
-                <Input type={props.type} placeholder={props.placeholder}/>
+                <Input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.onChange}/>
             </div>
         </div>
       );

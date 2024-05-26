@@ -7,16 +7,17 @@ const ButtonStyled = styled.button`
     border-radius: 5px;
     color: white;
     font-size: 18px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 5px 5px 0px rgba(0,0,0,0.75);
+    margin: 6px 0;
 
     &:hover {
         background-color: #5257de;
     }
 `;
 
-function Button(){
+function Button(props){
     return(
-        <ButtonStyled>Iniciar sesión</ButtonStyled>
+        <ButtonStyled onClick={props.onClick}>{props.text}</ButtonStyled>
     )
 }
 
