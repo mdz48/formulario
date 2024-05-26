@@ -1,9 +1,9 @@
-import SectionLogin from "../components/organisms/SectionLogin";
+import Section from '../components/organisms/Section';
 import './Home.css'
 function Home() {
     return ( 
         <div id="login-home">
-            <SectionLogin></SectionLogin>
+            <Section></Section>
         </div>
      );
 }

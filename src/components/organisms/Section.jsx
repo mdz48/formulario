@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Field from "../molecules/Field";
 import Button from "../atoms/Button";
-import './SectionLogin.css';
+import './Section.css';
 import { mysql } from '../../data/mysql';
 import Box from '../atoms/Box';
 
-function SectionLogin() {
+function Section() {
     const [nombre, setNombre] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [costo, setCosto] = useState('');
@@ -30,27 +30,27 @@ function SectionLogin() {
     };
 
     return (
-        <div id="login_section">
+        <div id="product_section">
             <Field 
                 type="text" 
                 placeholder="E.j Café" 
                 text="Nombre del Producto"
                 value={nombre} 
-                onChange={(e) => setNombre(e.target.value)} 
+                onChange={(event) => setNombre(event.target.value)} 
             />
             <Field 
                 type="text" 
                 placeholder="Ej. 10" 
                 text="Cantidad del producto"
                 value={cantidad} 
-                onChange={(e) => setCantidad(e.target.value)} 
+                onChange={(event) => setCantidad(event.target.value)} 
             />  
             <Field 
                 type="text" 
                 placeholder="Ej. $50" 
                 text="Costo del producto"
                 value={costo} 
-                onChange={(e) => setCosto(e.target.value)} 
+                onChange={(event) => setCosto(event.target.value)} 
             />    
             <Button onClick={handleButtonClick} text="Guardar Producto" />
             <Button onClick={handleShowClick} text="Ver Productos" />
@@ -59,4 +59,4 @@ function SectionLogin() {
     );
 }
 
-export default SectionLogin;
+export default Section;
