@@ -19,7 +19,6 @@ function Section() {
     const handleButtonClick = () => {
         mysql.data.push(producto);
         console.log(mysql.data);
-
         alert('Operación Exitósa');
     };
 
